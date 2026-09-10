@@ -1,0 +1,1 @@
+export { HeritageCard } from './HeritageCard';

@@ -1,0 +1,1 @@
+export { HeritageGrid } from './HeritageGrid';

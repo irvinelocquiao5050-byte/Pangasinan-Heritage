@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --font-heading / --font-body are injected by next/font (see
+   src/app/layout.tsx) as classes on <html>, so the actual Poppins/
+   Inter files are self-hosted and preloaded — no external request to
+   fonts.googleapis.com and no fallback flash to plain system-ui. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: theme('colors.neutral.900');
+  background-color: theme('colors.white');
+}
+
+/* Visible on :focus-visible only (mouse clicks stay clean) */
+:focus-visible {
+  outline: 2px solid theme('colors.ocean.500');
+  outline-offset: 2px;
+}
+
+/* Skip-link: hidden until focused, first tab stop on every page */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 0;
+}
