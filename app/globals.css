@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0F5C82;
+  --color-primary-dark: #08344A;
+  --color-primary-light: #4A8DAE;
+  --color-secondary: #E08D3C;
+  --color-secondary-dark: #B96F26;
+  --color-accent: #2AA198;
+  --color-neutral-900: #1A1A1A;
+  --color-neutral-600: #5A5A5A;
+  --color-neutral-300: #C9C4BC;
+  --color-neutral-100: #F5F3EF;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  --radius-sm: 8px;
+  --radius-card: 16px;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-900);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Respect users who prefer reduced motion (accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Visible focus ring everywhere for keyboard users (WCAG 2.1 AA) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
